@@ -28,7 +28,7 @@
                     <h1 class="text-white text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
                     
                     <div id="top_square" class= "py-2 px-5 bg-white">
-                        <form class="form-inline d-flex justify-content-center mt-3 mb-5">
+                        <div class="form-inline d-flex justify-content-center mt-3 mb-5">
                             <div class="form-group mx-sm-3 mb-2 d-flex flex-column">
                                 <div class="text_pink font-weight-bold mb-2">Nome e Cognome</div> 
                                 <input type="name" class="form-control" id="input_name" placeholder="Nome e cognome">
@@ -46,12 +46,12 @@
                                     <option id="over_65">Over 65</option>
                                 </select>
                             </div>
-                          </form>
+                        </div>
         
                         <div class="button_area d-flex justify-content-center mt-5">
     
-                            <button type="submit" class="btn bg_lightgrey text_pink font-weight-bold mb-2 mr-2">Genera</button>
-                            <button type="submit" class="btn bg_lightgrey text_pink font-weight-bold mb-2 ml-2">Annulla</button>
+                            <button id="genera" type="submit" class="btn bg_lightgrey text_pink font-weight-bold mb-2 mr-2">Genera</button>
+                            <button id="annulla" type="submit" class="btn bg_lightgrey text_pink font-weight-bold mb-2 ml-2">Annulla</button>
                         </div>
                     </div>
                     
@@ -66,28 +66,28 @@
     
                     <h1 class="text-white text-center">IL TUO BIGLIETTO</h1>
         
-                    <div class="container">
+                    <div class="container bg-white p-5">
                         <h2>DETTAGLIO PASSEGGERI</h2>
         
-                        <div class="row detail_area border-top border-bottom border-secondary bg-white">
+                        <div id="risultati" class="row detail_area border-top border-bottom border-secondary bg-white">
                             <div class="col-3 bg-secondary p-3">
                                 <h3>NOME PASSEGGERO</h3>
                                 <h4 id="nome_passeggero"></h4>
                             </div>
-                            <div class="col-3 p-3">
-                                <h3 class="mb-5">Offerta</h3>
+                            <div class="col-3 p-3 d-flex align-items-between flex-column">
+                                <h3 class="mb-auto">Offerta</h3>
                                 <h4 id="offerta"></h4>
                             </div>
-                            <div class="col-2 p-3">
-                                <h3 class="mb-5">Carrozza</h3>
+                            <div class="col-2 p-3 d-flex align-items-between flex-column">
+                                <h3 class="mb-auto">Carrozza</h3>
                                 <h4 id="numero_carrozza"></h4>
                             </div>
-                            <div class="col-2 p-3">
-                                <h3 class="mb-5">Codice CP</h3>
+                            <div class="col-2 p-3 d-flex align-items-between flex-column">
+                                <h3 class="mb-auto">Codice CP</h3>
                                 <h4 id="codice_treno"></h4>
                             </div>
-                            <div class="col-2 p-3">
-                                <h3 class="mb-5">Costo biglietto</h3>
+                            <div class="col-2 p-3 d-flex align-items-between flex-column">
+                                <h3 class="mb-auto">Costo biglietto</h3>
                                 <h4 id="costo_biglietto"></h4>
 
                             </div>

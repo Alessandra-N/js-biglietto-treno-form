@@ -10,7 +10,7 @@ var distance = document.getElementById('input_distance').addEventListener('input
     //Prende nota dell'input del menu a tendina
     document.getElementsByTagName('select')[0].onchange = function() {
         var index = this.selectedIndex;
-        var inputText = this.children[index].innerHTML.trim();
+        var inputText = this.children[index].innerHTML;
     
         //A seconda dell'età selezionata, da un diverso costo
         if (inputText === "Seleziona fascia d'età") {
@@ -35,14 +35,20 @@ var distance = document.getElementById('input_distance').addEventListener('input
     
 })
 
-var codiceTreno = Math.floor(Math.random() * (100000 - 90000 + 1) ) + 90000;
-document.getElementById("codice_treno").innerHTML = codiceTreno
-
-var numeroCarrozza = Math.floor(Math.random() * 12) + 1;
-document.getElementById("numero_carrozza").innerHTML = numeroCarrozza
-
 //Animazione bottoni con il click
-function myFunction() {
-    var button = document.getElementsByClassName("btn");
-    button.classList.add("bd_purple");
-  }
+var buttonGenera = document.getElementById("genera")
+    buttonGenera.addEventListener("click", function(){
+    this.classList.add("bd_purple");
+    //Genera il codice del treno da 90mila a 100mila
+    var codiceTreno = Math.floor(Math.random() * (100000 - 90000 + 1) ) + 90000;
+    document.getElementById("codice_treno").innerHTML = codiceTreno
+    //Genera il numero del vagone da 1 a 12
+    var numeroCarrozza = Math.floor(Math.random() * 12) + 1;
+    document.getElementById("numero_carrozza").innerHTML = numeroCarrozza
+});
+
+//Refresh della pagina quando si clicca su annulla
+var buttonAnnulla = document.getElementById("annulla")
+    buttonAnnulla.addEventListener("click", function(){
+    window.location.reload();
+});

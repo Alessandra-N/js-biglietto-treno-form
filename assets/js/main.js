@@ -8,8 +8,9 @@ var nomeUtente =document.getElementById('input_name').addEventListener('input', 
 
 
 var distance =document.getElementById('input_distance').addEventListener('input', function() {
+    var price = Math.round ((this.value * 0.21) * 100 + Number.EPSILON) / 100;
     
-    document.getElementById("nome_passeggero").innerHTML = (this.value);
+    document.getElementById("costo_biglietto").innerHTML = (price + " €");
     console.log(this.value);
 });
 

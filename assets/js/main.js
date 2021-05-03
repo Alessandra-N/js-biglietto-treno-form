@@ -1,4 +1,20 @@
-//chiedere all'utente il numero di chilometri che vuole percorrere 
+//Prende lo user name dal form e lo fa comparire nel Dettaglio Passeggeri
+var nomeUtente =document.getElementById('input_name').addEventListener('input', function() {
+    document.getElementById("nome_passeggero").innerHTML = (this.value);
+    console.log(this.value);
+});
+
+
+
+
+var distance =document.getElementById('input_distance').addEventListener('input', function() {
+    
+    document.getElementById("nome_passeggero").innerHTML = (this.value);
+    console.log(this.value);
+});
+
+
+/* //chiedere all'utente il numero di chilometri che vuole percorrere 
 
 var distance = parseInt (prompt ("Quanti chilometri intendi percorrere?"));
 
@@ -27,4 +43,4 @@ if (age < 18) {
 document.getElementById("percorso").innerHTML = ("Intendi percorrere ") + distance + (" km");
 document.getElementById("eta").innerHTML = ("Hai ") + age + (" anni");
 document.getElementById("costo").innerHTML = ("Il tuo biglietto costa ") + price + (" €");
-}
+} */

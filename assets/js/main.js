@@ -4,15 +4,33 @@ var nomeUtente =document.getElementById('input_name').addEventListener('input', 
     console.log(this.value);
 });
 
-
-
-
-var distance =document.getElementById('input_distance').addEventListener('input', function() {
+var distance = document.getElementById('input_distance').addEventListener('input', function() {
     var price = Math.round ((this.value * 0.21) * 100 + Number.EPSILON) / 100;
-    
-    document.getElementById("costo_biglietto").innerHTML = (price + " €");
     console.log(this.value);
-});
+
+    document.getElementsByTagName('select')[0].onchange = function() {
+        var index = this.selectedIndex;
+        var inputText = this.children[index].innerHTML.trim();
+    
+        if (inputText === "Minorenne") {
+            var minor_price = Math.round ((price - (price * 20 / 100)) * 100 + Number.EPSILON) / 100;
+            document.getElementById("costo_biglietto").innerHTML = (minor_price + " €");
+        } else if (inputText === "Over 65") {
+            var senior_price = Math.round ((price - ((price * 40) / 100)) * 100 + Number.EPSILON) / 100;
+        document.getElementById("costo_biglietto").innerHTML = (senior_price + " €");
+        } else {
+            document.getElementById("costo_biglietto").innerHTML = (price + " €");
+        }
+    
+        console.log(inputText);
+    }
+    
+})
+
+/* You can check the selectedIndex property. 
+If you want something to happend each time the item changes, use the onchange event binding.
+ */
+
 
 
 /* //chiedere all'utente il numero di chilometri che vuole percorrere 

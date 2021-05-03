@@ -23,11 +23,13 @@
             
             <div class="container">
 
+                <!-- Primo quadrato, dove avviene il calcolo -->
                 <div id="calcolo">
 
                     <h1 class="text-white text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
                     
-                    <div id="top_square" class= "py-2 px-5 bg-white">
+                    <div id="top_square" class= "py-2 px-5 bg-white rounded">
+                        <!-- Form da compilare -->
                         <div class="form-inline d-flex justify-content-center mt-3 mb-5">
                             <div class="form-group mx-sm-3 mb-2 d-flex flex-column">
                                 <div class="text_pink font-weight-bold mb-2">Nome e Cognome</div> 
@@ -37,6 +39,7 @@
                                 <div class="text_pink font-weight-bold mb-2">Km da percorrere</div>
                                 <input type="distance" class="form-control" id="input_distance" placeholder="Distanza da percorrere">
                             </div>
+                            <!-- menu a tendina con età da selezionare -->
                             <div class="form-group mx-sm-3 mb-2 d-flex flex-column">
                                 <div class="text_pink font-weight-bold mb-2">Fascia d'età</div>
                                 <select id="input_age" class="form-control">
@@ -48,8 +51,8 @@
                             </div>
                         </div>
         
+                        <!-- pusalnti da cliccare -->
                         <div class="button_area d-flex justify-content-center mt-5">
-    
                             <button id="genera" type="submit" class="btn bg_lightgrey text_pink font-weight-bold mb-2 mr-2">Genera</button>
                             <button id="annulla" type="submit" class="btn bg_lightgrey text_pink font-weight-bold mb-2 ml-2">Annulla</button>
                         </div>
@@ -68,7 +71,8 @@
         
                     <div class="container bg-white p-5">
                         <h2>DETTAGLIO PASSEGGERI</h2>
-        
+                        
+                        <!-- Quadrato dove compare il riepilogo delle scelte effettuate e dei dati generati casualmente -->
                         <div id="risultati" class="row detail_area border-top border-bottom border-secondary bg-white">
                             <div class="col-3 bg-secondary p-3">
                                 <h3>NOME PASSEGGERO</h3>

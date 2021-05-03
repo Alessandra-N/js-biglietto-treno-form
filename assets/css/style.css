@@ -1,7 +1,11 @@
+/* CSS quadrato di calcolo (dove avviene il riepilogo dei dati inseriti
+e quelli generati casualmente) */
 .col-2, .col-3 {
     height: 30vh;
 }
 
+/* CSS Utilità */
+/* Backgrounds */
 .bg_pink {
     background-color: #b91450;
 }
@@ -9,10 +13,12 @@
     background-color: #cccccc;
 }
 
+/* Testi */
 .text_pink {
     color: #b91450;
 }
 
+/* Bordi */
 .bd_purple {
     border: 5px solid purple !important;
 }

@@ -38,4 +38,11 @@ var distance = document.getElementById('input_distance').addEventListener('input
 var codiceTreno = Math.floor(Math.random() * (100000 - 90000 + 1) ) + 90000;
 document.getElementById("codice_treno").innerHTML = codiceTreno
 
-console.log(codiceTreno);
+var numeroCarrozza = Math.floor(Math.random() * 12) + 1;
+document.getElementById("numero_carrozza").innerHTML = numeroCarrozza
+
+//Animazione bottoni con il click
+function myFunction() {
+    var button = document.getElementsByClassName("btn");
+    button.classList.add("bd_purple");
+  }

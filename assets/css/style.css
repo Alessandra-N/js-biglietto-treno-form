@@ -1,0 +1,14 @@
+.bg_pink {
+    background-color: #b91450;
+}
+.bg_lightgrey {
+    background-color: #cccccc;
+}
+
+.text_pink {
+    color: #b91450;
+}
+
+.bd_purple {
+    border: 5px solid purple !important;
+}

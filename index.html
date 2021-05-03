@@ -14,7 +14,7 @@
         <script src="https://kit.fontawesome.com/aa8b984e32.js" crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body class="bg_pink">
 
         <!-- ***** il primo riquadro della pgina, 
             contiene il form da compilare ed i bottoni
@@ -23,32 +23,38 @@
             
             <div class="container">
 
-                <div class="calcolo">
+                <div id="calcolo">
 
-                    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                    <h1 class="text-white text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                    
+                    <div id="top_square" class= "py-2 px-5 bg-white">
+                        <form class="form-inline d-flex justify-content-center mt-3 mb-5">
+                            <div class="form-group mx-sm-3 mb-2 d-flex flex-column">
+                                <div class="text_pink font-weight-bold mb-2">Nome e Cognome</div> 
+                                <input type="name" class="form-control" id="input_name" placeholder="Nome e cognome">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2 d-flex flex-column">
+                                <div class="text_pink font-weight-bold mb-2">Km da percorrere</div>
+                                <input type="distance" class="form-control" id="input_distance" placeholder="Distanza da percorrere">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2 d-flex flex-column">
+                                <div class="text_pink font-weight-bold mb-2">Fascia d'età</div>
+                                <select id="input_age" class="form-control">
+                                    <option>Seleziona fascia d'età</option>
+                                    <option id="normale">19 - 64</option>
+                                    <option id="minorenne">Minorenne</option>
+                                    <option id="over_65">Over 65</option>
+                                </select>
+                            </div>
+                          </form>
         
-                    <form class="form-inline">
-                        <div class="form-group mx-sm-3 mb-2">
-                            <input type="name" class="form-control" id="input_name" placeholder="Nome e cognome">
-                        </div>
-                        <div class="form-group mx-sm-3 mb-2">
-                            <input type="distance" class="form-control" id="input_distance" placeholder="Distanza da percorrere">
-                        </div>
-                        <div class="form-group mx-sm-3 mb-2">
-                            <select id="input_age" class="form-control">
-                                <option>Seleziona fascia d'età</option>
-                                <option id="normale">19 - 64</option>
-                                <option id="minorenne">Minorenne</option>
-                                <option id="over_65">Over 65</option>
-                            </select>
-                        </div>
-                      </form>
+                        <div class="button_area d-flex justify-content-center mt-5">
     
-                    <div class="button_area">
-
-                        <button type="submit" class="btn btn-secondary mb-2">Genera</button>
-                        <button type="submit" class="btn btn-secondary mb-2">Annulla</button>
+                            <button type="submit" class="btn bg_lightgrey text_pink font-weight-bold mb-2 mr-2">Genera</button>
+                            <button type="submit" class="btn bg_lightgrey text_pink font-weight-bold mb-2 ml-2">Annulla</button>
+                        </div>
                     </div>
+                    
                 
                 </div>
         
@@ -58,29 +64,30 @@
                 
                 <div class="risultati">
     
-                    <h1>IL TUO BIGLIETTO</h1>
+                    <h1 class="text-white text-center">IL TUO BIGLIETTO</h1>
         
                     <div class="container">
                         <h2>DETTAGLIO PASSEGGERI</h2>
         
-                        <div class="row detail_area">
-                            <div class="col-4 bg-secondary">
+                        <div class="row detail_area border-top border-bottom border-secondary bg-white">
+                            <div class="col-3 bg-secondary p-3">
                                 <h3>NOME PASSEGGERO</h3>
                                 <h4 id="nome_passeggero"></h4>
                             </div>
-                            <div class="col-2">
-                                <h3>Offerta</h3>
+                            <div class="col-3 p-3">
+                                <h3 class="mb-5">Offerta</h3>
                                 <h4 id="offerta"></h4>
                             </div>
-                            <div class="col-2">
-                                <h3>Carrozza</h3>
+                            <div class="col-2 p-3">
+                                <h3 class="mb-5">Carrozza</h3>
+                                <h4 id="numero_carrozza"></h4>
                             </div>
-                            <div class="col-2">
-                                <h3>Codice CP</h3>
+                            <div class="col-2 p-3">
+                                <h3 class="mb-5">Codice CP</h3>
                                 <h4 id="codice_treno"></h4>
                             </div>
-                            <div class="col-2">
-                                <h3>Costo biglietto</h3>
+                            <div class="col-2 p-3">
+                                <h3 class="mb-5">Costo biglietto</h3>
                                 <h4 id="costo_biglietto"></h4>
 
                             </div>
